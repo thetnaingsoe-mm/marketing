@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+}
+
+/*-------------------------------------nav_main_control----------------------------*/
+.brand_logo{
+    width: 150px;
+}
+
+.nav_main_control{
+    position: absolute;
+    top: 0;
+    z-index: 50;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1);
+}
+
+.navbar-toggler:focus{
+    outline: none;
+}
+
+.nav_scroll{ /*jQuery control*/
+    position: fixed;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #00000020;
+    animation: toShow 1s linear;
+}
+
+.nav_scroll .nav-link{ /*nav_scroll ရဲ့ nav-link ဖြစ်မှ color ပြောင်ခြင်း*/
+    color: #1A129F !important;
+}
+
+.nav_scroll .menu_icon{
+    color: #1A129F;
+}
+
+.nav-link.current_active_section{
+    border: 2px solid white;
+    border-radius: 10em;
+    padding: 0.5rem 1.3rem !important;
+}
+
+
+.nav_scroll .nav-link.current_active_section{
+    border: 2px solid #1A129F;
+    border-radius: 10em;
+    padding: 0.5rem 1.3rem !important;
+}
+
+
+@keyframes toShow {
+    from{
+        transform: translateY(-200px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .nav_main_control{
+        background-color: #ffffffee;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 5px #00000015;
+    }
+
+    .nav_main_control .menu_icon{
+        color: #1A129F !important;
+    }
+
+    .navbar-nav{
+        padding-top: 20px;
+    }
+
+    .nav_main_control .nav-link{
+        color: #1A129F !important;
+        padding: 15px 20px;
+        background: #ffffff;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px #00000015;
+        border-radius: 10em;
+    }
+
+    .nav-link.current_active_section{ /*mobile and tablet ရဲ့ home ကို active ဖြစ်စေရန် ထည့်ထားခြင်းဖြစ်သည်။*/
+        border: 2px solid #1A129F;
+        border-radius: 10em;
+        padding: 0.5rem 1.3rem !important;
+    }
+
+}
+
+/*------------------------------------------------Home_view-------------------------------*/
+.home{
+    background-image: url("../img/bg-shape.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 50%;
+    position: relative;
+}
+
+.social_v{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social_v a{
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.social_v a:hover{
+    transform: scale(1.5);
+}
+
+
+.scroll_to_next{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.animate_delay_1{
+    animation-delay: 0.5s;
+}
+
+.animate_delay_2{
+    animation-delay: 1s;
+}
+
+.animate_delay_3{
+    animation-delay: 1.5s;
+}
+
+.animate_delay_4{
+    animation-delay: 2s;
+}
+
+.animate_delay_5{
+    animation-delay: 2.5s;
+}
+
+@media screen and (max-width: 576px) {
+    .social_v{
+       left: auto;
+        right: 35px;
+        bottom: 80px;
+    }
+
+   .scroll_to_next{
+       margin: 10px;
+       left:auto;
+       right: 10px;
+       bottom: 10px;
+   }
+}
+
+/*------------------------------------------------About_Us---------------------------------*/
+.about_us_main{
+    background-color: #7E76F910;
+}
+
+.about_us{
+    background-image: url("../img/bg-2.svg");
+    background-size: 100%;
+    background-position: center;
+}
+
+@media screen and (max-width: 576px) {
+   .about_us_img,.about_us_text{
+        width: 100% !important;
+    }
+}
+
+/*------------------------------------------------Services---------------------------------*/
+.services{
+    background-image: url("../img/bg-3.svg");
+    background-size: 100%;
+    background-position: center;
+}
+
+.services_card{
+    border-radius: 35px !important;
+    border:none !important;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.05) !important;
+    transition: 0.5s;
+}
+
+.services_card:hover{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    transform: scale(0.98);
+}
+
+.services_card img{
+    transition: 0.5s;
+}
+
+.services_card:hover img{
+    transform: translateX(20px);
+}
+
+/*------------------------------------------------Pricing---------------------------------*/
+
+.pricing{
+    background-color: #7E76F920;
+}
+
+
+.pricing_card{
+    border-radius: 35px !important;
+    border:none !important;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.05) !important;
+    transition: 0.5s;
+}
+
+.pricing_card:hover{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    transform: scale(0.98);
+}
+
+.slick-slide{
+    padding: 5px;
+    outline: none;
+}
+
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li{
+    width: 10px !important;
+    height: 10px !important;
+    background-color: transparent;
+    border: 2px solid #7E76F9;
+    border-radius: 50% ;
+}
+
+
+.slick-dots li.slick-active{
+    width: 15px !important;
+    height: 15px !important;
+    background-color: #7E76F9 !important;
+}
+
+/*------------------------------------------------Footer---------------------------------*/
+
+.footer_main_control{
+    background-image: url("../img/footer-1.svg"),url("../img/footer-2.svg");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    padding: 150px 0  0;
+}
+
+.social_icon a{
+    transition: 0.5s;
+}
+.social_icon a:hover{
+    transform: scale(1.5);
+}
+@media screen and (max-width: 1024px){
+    .footer_main_control{
+        background-size: cover;
+        background-position: center;
+        margin-top: 30px;
+    }
+}
+
+
+
